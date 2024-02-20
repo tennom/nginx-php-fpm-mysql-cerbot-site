@@ -4,3 +4,7 @@
 *.sql
 web/data
 images/
+# ignore the actual logs but keep the log dirs
+logs/nginx/*
+logs/mysql/*
+logs/php-fpm/*
