@@ -12,7 +12,6 @@ services:
             - "443:1443"
         volumes:
             - web-root:/usr/share/nginx/html/tennom.net
-            # - trisoul-root:/usr/share/nginx/html/trisoul.net
             - "${CONFIG_DIR}/nginx/nginx.conf:/etc/nginx/nginx.conf"
             - "${CONFIG_DIR}/nginx/sites-enabled:/etc/nginx/sites-enabled"
             - "${CONFIG_DIR}/nginx/conf.d:/etc/nginx/conf.d"
@@ -82,12 +81,6 @@ volumes:
         driver_opts:
             type: none
             device: ${WEB_ROOT_DIR}
-            o: bind
-    trisoul-root:
-        driver: local
-        driver_opts:
-            type: none
-            device: ${TRISOUL_ROOT_DIR}
             o: bind
 
 networks:
