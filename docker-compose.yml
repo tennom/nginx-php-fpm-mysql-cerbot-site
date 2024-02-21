@@ -16,7 +16,7 @@ services:
             - "${CONFIG_DIR}/nginx/nginx.conf:/etc/nginx/nginx.conf"
             - "${CONFIG_DIR}/nginx/sites-enabled:/etc/nginx/sites-enabled"
             - "${CONFIG_DIR}/nginx/conf.d:/etc/nginx/conf.d"
-            - ./logs/nginx:/var/log/nginx
+            # - ./logs/nginx:/var/log/nginx
             - certbot-etc:/etc/letsencrypt:ro
             # volumes for verifying domain names to LetsEncrypt and keeping its certificates
             - ./certbot/webroot:/var/www/certbot:ro
