@@ -75,8 +75,8 @@ services:
           --agree-tos --no-eff-email --force-renewal -d ${DOMAIN_NAME}  -d www.${DOMAIN_NAME}
           --uir --hsts --staple-ocsp --must-staple
         # certbot service is not run by default since it's not needed once the certificates received.
-        profiles:
-        - with-certbot
+        # profiles:
+        # - with-certbot
     
 volumes:
     php-socket:
