@@ -75,7 +75,7 @@ services:
             - web
         command: >-
           certonly --webroot --webroot-path=/var/www/certbot --email ${ADMIN_EMAIL} 
-          --agree-tos --no-eff-email --force-renewal -d ${DOMAIN_NAME}  -d www.${DOMAIN_NAME}
+          --agree-tos --no-eff-email --force-renewal -d ${SERVER_DOMAIN_NAME}  -d www.${SERVER_DOMAIN_NAME}
           --uir --hsts --staple-ocsp --must-staple
         # certbot service is not run by default since it's not needed once the certificates received.
         # profiles:
