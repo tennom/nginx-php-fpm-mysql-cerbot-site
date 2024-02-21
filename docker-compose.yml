@@ -6,6 +6,7 @@ services:
         build:
             context: nginx
         image: trihost_nginx:1.0
+        container_name: nginx-web-server
         restart: always
         ports:
             - "80:8080"
@@ -28,6 +29,7 @@ services:
         build:
             context: php-fpm
         image: trihost_php-fpm:1.0
+        container_name: php-fpm-server
         restart: always
         # container_name: app
         volumes:
@@ -47,6 +49,7 @@ services:
         build:
             context: mysql
         image: trihost_mysql:1.0
+        container_name: mysql-server
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
